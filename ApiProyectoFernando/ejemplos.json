@@ -1,0 +1,201 @@
+{
+  "info": {
+    "name": "API Universo Dead Space",
+    "description": "Ejemplos de solicitudes para la API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Naves",
+      "item": [
+        {
+          "name": "Obtener todas las naves",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/naves"
+          }
+        },
+        {
+          "name": "Obtener nave por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/naves/1"
+          }
+        },
+        {
+          "name": "Crear nueva nave",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:3000/api/naves",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"Nueva Nave\",\"clase_nave_id\":1,\"faccion_id\":2,\"fabricante\":\"Fabricante XYZ\",\"armamento\":\"Láser\",\"capacidad_tripulacion\":\"50\"}"
+            }
+          }
+        },
+        {
+          "name": "Actualizar nave",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:3000/api/naves/1",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"Nave Actualizada\"}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar nave",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:3000/api/naves/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Personajes",
+      "item": [
+        {
+          "name": "Obtener todos los personajes",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/personajes"
+          }
+        },
+        {
+          "name": "Obtener personaje por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/personajes/1"
+          }
+        },
+        {
+          "name": "Obtener personajes por facción",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/personajes/faccion/1"
+          }
+        },
+        {
+          "name": "Crear nuevo personaje",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:3000/api/personajes",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"Nuevo Personaje\",\"especie_id\":1,\"planeta_origen_id\":2,\"lugar_origen_id\":1,\"estado\":\"Vivo\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Planetas",
+      "item": [
+        {
+          "name": "Obtener todos los planetas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/planetas"
+          }
+        },
+        {
+          "name": "Obtener planeta por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/planetas/1"
+          }
+        },
+        {
+          "name": "Obtener especies de un planeta",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/planetas/1/especies"
+          }
+        },
+        {
+          "name": "Obtener lugares de un planeta",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/planetas/1/lugares"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Facciones",
+      "item": [
+        {
+          "name": "Obtener todas las facciones",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/facciones"
+          }
+        },
+        {
+          "name": "Obtener facción por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/facciones/1"
+          }
+        },
+        {
+          "name": "Obtener miembros de una facción",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/facciones/1/miembros"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Armas",
+      "item": [
+        {
+          "name": "Obtener todas las armas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/armas"
+          }
+        },
+        {
+          "name": "Obtener armas por categoría",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/armas/categoria/Rifle"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Criaturas",
+      "item": [
+        {
+          "name": "Obtener todas las criaturas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/criaturas"
+          }
+        },
+        {
+          "name": "Obtener criaturas por peligro",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/criaturas/peligro/8"
+          }
+        },
+        {
+          "name": "Obtener criaturas de un planeta",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/criaturas/planeta/3"
+          }
+        }
+      ]
+    }
+  ]
+}
